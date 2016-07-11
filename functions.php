@@ -183,7 +183,7 @@ function inkblot_after_setup_theme() {
 		}
 	}
 	
-	add_editor_style(add_query_arg(array('inkblot-mods' => 'editor')));
+	add_editor_style(add_query_arg(array('inkblot-mods' => 'editor'), admin_url()) );
 	
 	add_filter('use_default_gallery_style', '__return_false');
 	add_filter('show_recent_comments_widget_style', '__return_false');
