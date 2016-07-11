@@ -171,7 +171,7 @@ if ( ! function_exists('inkblot_after_setup_theme')) :
 function inkblot_after_setup_theme() {
 	load_theme_textdomain('inkblot', get_template_directory() . '/_/l10n');
 	
-	add_editor_style(get_stylesheet_uri());
+	//add_editor_style(get_stylesheet_uri());
 	
 	if (get_theme_mod('font') or get_theme_mod('page_font') or get_theme_mod('title_font')) {
 		foreach (array_filter(array(
@@ -183,7 +183,7 @@ function inkblot_after_setup_theme() {
 		}
 	}
 	
-	add_editor_style(add_query_arg(array('inkblot-mods' => 'editor'), home_url('/')));
+	add_editor_style(add_query_arg(array('inkblot-mods' => 'editor')));
 	
 	add_filter('use_default_gallery_style', '__return_false');
 	add_filter('show_recent_comments_widget_style', '__return_false');
